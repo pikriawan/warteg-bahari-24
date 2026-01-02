@@ -13,7 +13,6 @@ class Order extends Model
         'customer_id',
         'order_number',
         'status',
-        'total_payment',
     ];
 
     public function admin(): BelongsTo

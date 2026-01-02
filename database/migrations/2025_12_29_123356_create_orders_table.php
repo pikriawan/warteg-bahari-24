@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('admin_id')->nullable()->constrained();
             $table->foreignId('customer_id')->constrained();
-            $table->string('order_number');
             $table->enum('status', ['pending', 'processing', 'finished', 'canceled'])->nullable();
-            $table->double('total_payment');
             $table->timestamps();
         });
     }
