@@ -13,12 +13,12 @@ class CartController extends Controller
 {
     public function index(Request $request)
     {
-        $menus = Customer::where('session_id', $request->session()->getId())
-            ->first()
+        $customer = Customer::where('session_id', $request->session()->getId())->first();
+        $cart = $customer
             ->orders
             ->where('status', null)
-            ->first()
-            ->menus;
+            ->first();
+        $menus = $cart->menus;
         
         return view('cart', [
             'menus' => $menus,
