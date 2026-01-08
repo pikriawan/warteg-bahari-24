@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MenuController;
@@ -24,4 +25,20 @@ Route::middleware([EnsureCustomerExists::class, EnsureCustomerHasCart::class])->
     Route::get('/orders', [OrderController::class, 'index']);
 
     Route::get('/order/{order}', [OrderController::class, 'show']);
+});
+
+Route::middleware('guest:admin')->group(function () {
+    Route::get('/admin/login', function () {
+        return view('admin.login');
+    });
+
+    Route::post('/admin/login', [AuthController::class, 'authenticate']);
+});
+
+Route::middleware('auth:admin')->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.dashboard');
+    });
+
+    Route::post('/admin/logout', [AuthController::class, 'logout']);
 });
