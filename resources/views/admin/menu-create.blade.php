@@ -7,7 +7,7 @@
         @csrf
         <div>
             <label for="name">Nama menu</label>
-            <input name="name" id="menuName" required>
+            <input name="name" id="name" required>
         </div>
         <div>
             <img class="preview" id="preview" src="" alt="" width="128" height="128">

@@ -50,4 +50,10 @@ Route::middleware('auth:admin')->group(function () {
     });
 
     Route::post('/admin/menu/create', [AdminMenuController::class, 'store']);
+
+    Route::get('/admin/menu/{menu}', [AdminMenuController::class, 'show']);
+
+    Route::put('/admin/menu/{menu}', [AdminMenuController::class, 'update']);
+
+    Route::delete('/admin/menu/{menu}', [AdminMenuController::class, 'destroy']);
 });
