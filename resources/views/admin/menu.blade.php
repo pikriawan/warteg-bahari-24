@@ -59,19 +59,36 @@
         image.addEventListener("input", (event) => {
             const file = event.currentTarget.files[0];
             preview.src = URL.createObjectURL(file);
+
+            preview.addEventListener("load", () => {
+                URL.revokeObjectURL(preview.src);
+            });
         });
 
         async function fetchImage() {
-            const response = await fetch("{{ asset('storage/' . $menu->image) }}");
-            console.log(response);
-    
-            if (response.ok) {
-                const data = await response.blob();
-                preview.src = URL.createObjectURL(data);
-                const file = new File([data], "{{ $menu->name }}");
-                const dt = new DataTransfer();
-                dt.items.add(file);
-                image.files = dt.files;
+            try {
+                const response = await fetch("{{ asset('storage/' . $menu->image) }}");
+
+                if (!response.ok) {
+                    throw new Error("Image fetch failed");
+                }
+
+                const blob = await response.blob();
+
+                preview.src = URL.createObjectURL(blob);
+
+                preview.addEventListener("load", () => {
+                    URL.revokeObjectURL(preview.src);
+                });
+
+                const fileName = "{{ basename($menu->image) }}";
+                const file = new File([blob], fileName, { type: blob.type });
+
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                image.files = dataTransfer.files;
+            } catch (error) {
+                console.error('Error loading image:', error);
             }
         }
 

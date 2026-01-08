@@ -5,7 +5,7 @@
     <h1>Menu</h1>
     <a href="/admin/menu/create">Buat menu baru</a>
     <div class="menu-list">
-        @foreach ($menus as $menu)
+        @forelse ($menus as $menu)
             <div>
                 <img class="menu-image" src="{{ $menu->image === null ? '/images/menu-placeholder.jpg' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
                 <h3>{{ $menu->name }}</h3>
@@ -14,6 +14,8 @@
                 <p>{{ $menu->is_available ? 'Tersedia' : 'Habis' }}</p>
                 <a href="/admin/menu/{{ $menu->id }}">Edit menu</a>
             </div>
-        @endforeach
+        @empty
+            <p>Tidak ada menu</p>
+        @endforelse
     </div>
 </x-admin-layout>
