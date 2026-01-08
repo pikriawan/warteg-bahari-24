@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\MenuController as AdminMenuController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MenuController;
@@ -41,4 +42,10 @@ Route::middleware('auth:admin')->group(function () {
     });
 
     Route::post('/admin/logout', [AuthController::class, 'logout']);
+
+    Route::get('/admin/menus', [AdminMenuController::class, 'index']);
+
+    Route::get('/admin/menu/create', function () {
+        return view('admin.menu-create');
+    });
 });

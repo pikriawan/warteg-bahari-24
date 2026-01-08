@@ -14,7 +14,7 @@ class MenuController extends Controller
             return $menu->category;
         });
 
-        return view('menu', [
+        return view('menus', [
             'data' => $data,
         ]);
     }

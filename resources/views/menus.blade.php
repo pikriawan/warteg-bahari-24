@@ -1,6 +1,6 @@
 <x-customer-layout>
     @push('styles')
-        @vite('resources/css/menu.css')
+        @vite('resources/css/menus.css')
     @endpush
     <div class="menu-category-list">
         @foreach ($data as $category => $menus)

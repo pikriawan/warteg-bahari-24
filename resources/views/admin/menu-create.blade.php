@@ -1,0 +1,50 @@
+<x-admin-layout>
+    @push('styles')
+        @vite('resources/css/admin-menu-create.css')
+    @endpush
+    <h1>Buat menu baru</h1>
+    <form action="/admin/menu/create" method="post">
+        @csrf
+        <div>
+            <label for="name">Nama menu</label>
+            <input name="name" id="menuName" required>
+        </div>
+        <div>
+            <img class="preview" id="preview" src="" alt="" width="128" height="128">
+            <br>
+            <label for="image">Gambar</label>
+            <input type="file" name="image" id="image" accept="image/jpeg, image/png" required>
+        </div>
+        <div>
+            <label for="price">Harga</label>
+            <input type="number" name="price" id="price" required>
+        </div>
+        <div>
+            <label for="category">Kategori</label>
+            <input name="category" id="category">
+        </div>
+        <div>
+            <span>Tersedia?</span>
+            <br>
+            <input type="radio" name="is_available" id="available" checked required>
+            <label for="available">Ya</label>
+            <br>
+            <input type="radio" name="is_available" id="unavailable" required>
+            <label for="unavailable">Tidak</label>
+        </div>
+        <div>
+            <a href="/admin/menus">Batal</a>
+            <button>Buat menu baru</button>
+        </div>
+    </form>
+    <script>
+        const preview = document.getElementById("preview");
+        const image = document.getElementById("image");
+
+        image.addEventListener("input", (event) => {
+            console.log(event.currentTarget.files[0]);
+            const file = event.currentTarget.files[0];
+            preview.src = URL.createObjectURL(file);
+        });
+    </script>
+</x-admin-layout>
