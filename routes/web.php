@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\MenuController as AdminMenuController;
+use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MenuController;
@@ -56,4 +57,10 @@ Route::middleware('auth:admin')->group(function () {
     Route::put('/admin/menu/{menu}', [AdminMenuController::class, 'update']);
 
     Route::delete('/admin/menu/{menu}', [AdminMenuController::class, 'destroy']);
+
+    Route::get('/admin/orders', [AdminOrderController::class, 'index']);
+
+    Route::put('/admin/order/{order}/status', [AdminOrderController::class, 'updateStatus']);
+
+    Route::get('/admin/order/{order}', [AdminOrderController::class, 'show']);
 });
