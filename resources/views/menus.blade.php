@@ -9,7 +9,7 @@
                 <div class="menu-list">
                     @foreach ($menus as $menu)
                         <div>
-                            <img class="menu-image" src="{{ $menu->image === null ? '/images/menu-placeholder.jpg' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
+                            <img class="menu-image" src="{{ $menu->image === null ? '/images/menu-placeholder.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
                             <h3>{{ $menu->name }}</h3>
                             <p>Harga: {{ $menu->price }}</p>
                             <p>Kategori: {{ $menu->category === null ? 'uncategorized' : $menu->category }}</p>

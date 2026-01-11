@@ -3,7 +3,7 @@
         @vite('resources/css/customer-layout.css')
     @endpush
     <x-header></x-header>
-    <main class="page">
+    <div class="page">
         {{ $slot }}
-    </main>
+    </div>
 </x-root-layout>

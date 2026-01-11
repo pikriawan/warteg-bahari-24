@@ -27,6 +27,31 @@
 .button-primary {
     background-color: #00B700;
     color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-primary:hover {
+    background-color: #0ADE09;
+}
+
+.button-primary:active {
+    background-color: #049105;
+}
+
+.button-outlined {
+    box-shadow: 0 0 0 0.0625rem #00B700 inset;
+    color: #00B700;
+    transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.button-outlined:hover {
+    box-shadow: 0 0 0 0.0625rem #0ADE09 inset;
+    color: #0ADE09;
+}
+
+.button-outlined:active {
+    box-shadow: 0 0 0 0.0625rem #049105 inset;
+    color: #049105;
 }
 
 .link {

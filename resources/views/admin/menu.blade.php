@@ -11,7 +11,7 @@
             <input name="name" id="name" value="{{ $menu->name }}" required>
         </div>
         <div>
-            <img class="preview" id="preview" src="{{ $menu->image === null ? '/images/menu-placeholder.jpg' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
+            <img class="preview" id="preview" src="{{ $menu->image === null ? '/images/menu-placeholder.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
             <br>
             <label for="image">Gambar</label>
             <input type="file" name="image" id="image" accept="image/jpeg, image/png">
@@ -99,7 +99,7 @@
         const menuImageDelete = document.getElementById("menuImageDelete");
 
         menuImageDelete.addEventListener("click", () => {
-            preview.src = "/images/menu-placeholder.jpg";
+            preview.src = "/images/menu-placeholder.png";
             image.value = "";
         });
     </script>
