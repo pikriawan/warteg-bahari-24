@@ -5,7 +5,7 @@
     <div class="menu-list">
         @forelse ($menus as $menu)
             <div>
-                <img class="menu-image" src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
+                <img class="menu-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
                 <h3>{{ $menu->name }}</h3>
                 <p>Harga: {{ $menu->price }}</p>
                 <p>Jumlah di keranjang: {{ $menu->pivot->menu_quantity }}</p>

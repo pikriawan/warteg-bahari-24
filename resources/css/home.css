@@ -251,6 +251,5 @@
 
     .contact-buttons {
         flex-direction: row;
-        gap: 2rem;
     }
 }
