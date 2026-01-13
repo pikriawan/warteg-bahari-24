@@ -105,8 +105,5 @@
                 </a>
             </div>
         </section>
-        <footer class="footer">
-            <p>&copy 2026 Warteg Bahari 24</p>
-        </footer>
     </main>
 </x-customer-layout>

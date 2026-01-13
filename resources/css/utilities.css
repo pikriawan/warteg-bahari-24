@@ -6,6 +6,7 @@
     border: 0;
     border-radius: 0;
     background-color: transparent;
+    font-family: 'Outfit', sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
 }
@@ -19,6 +20,7 @@
     border: 0;
     border-radius: 9999px;
     background-color: transparent;
+    font-family: 'Outfit', sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     text-decoration: none;
