@@ -10,9 +10,12 @@ class MenuController extends Controller
 {
     public function index(Request $request): View
     {
-        $data = Menu::all()->groupBy(function ($menu) {
-            return $menu->category;
-        });
+        $data = Menu::where('is_available', true)
+            ->latest()
+            ->get()
+            ->groupBy(function ($menu) {
+                return $menu->category;
+            });
 
         return view('menus', [
             'data' => $data,
