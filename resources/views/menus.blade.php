@@ -5,7 +5,7 @@
     <main class="main">
         <h1 class="menus-title">Mau Pesan Apa Hari Ini?</h1>
         <form class="search-form">
-            @if (request('category'))
+            @if (request('category') !== null)
                 <input type="hidden" name="category" value="{{ request('category') }}">
             @endif
             <div class="form-field">
@@ -16,19 +16,31 @@
                 </div>
             </div>
         </form>
-        @if (count($data) > 0)
-            <div class="filters">
-                <a class="button button-outlined filter{{ request('category') === null ? ' selected' : '' }}" href="/menus">
+        <div class="filters">
+            <form>
+                @if (request('search'))
+                    <input type="hidden" name="search" value="{{ request('search') }}">
+                @endif
+                <input type="hidden" name="category" value="">
+                <button class="button button-outlined filter{{ request('category') === null ? ' selected' : '' }}">
                     <svg class="filter-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
                     Semua
-                </a>
-                @foreach ($categories as $category)
-                    <a class="button button-outlined filter{{ request('category') === $category ? ' selected' : '' }}" href="/menus?category={{ $category }}">
+                </button>
+            </form>
+            @foreach ($categories as $category)
+                <form>
+                    @if (request('search'))
+                        <input type="hidden" name="search" value="{{ request('search') }}">
+                    @endif
+                    <input type="hidden" name="category" value="{{ $category }}">
+                    <button class="button button-outlined filter{{ request('category') === $category ? ' selected' : '' }}">
                         <svg class="filter-check-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
                         {{ Str::title($category) }}
-                    </a>
-                @endforeach
-            </div>
+                    </button>
+                </form>
+            @endforeach
+        </div>
+        @if (count($data) > 0)
             @foreach ($data as $category => $menus)
                 <div class="menus-category">
                     <h2 class="menus-category-title">{{ $category === '' ? 'Lainnya' : Str::title($category) }}</h2>
@@ -51,6 +63,8 @@
                     </div>
                 </div>
             @endforeach
+        @else
+            <p>Menu tidak ditemukan</p>
         @endif
     </main>
 </x-customer-layout>

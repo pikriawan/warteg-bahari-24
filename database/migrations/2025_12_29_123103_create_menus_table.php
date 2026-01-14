@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('admin_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->double('price');
-            $table->string('category')->nullable();
+            $table->string('category')->default('uncategorized');
             $table->boolean('is_available');
             $table->string('image')->nullable();
             $table->timestamps();
