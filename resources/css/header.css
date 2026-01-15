@@ -13,9 +13,27 @@
     height: 3rem;
 }
 
-.mobile-navbar-toggle-balancer {
+.cart-link {
+    position: relative;
+}
+
+.menu-quantity-counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    background-color: #FF0800;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+}
+
+.mobile-navbar-toggle-container {
     width: 3rem;
     height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-navbar {
@@ -25,6 +43,7 @@
 .mobile-navbar.show {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
     width: 100%;
     position: absolute;
@@ -54,7 +73,7 @@
         display: none;
     }
 
-    .mobile-navbar-toggle-balancer {
+    .mobile-navbar-toggle-container {
         display: none;
     }
 
