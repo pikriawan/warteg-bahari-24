@@ -1,7 +1,7 @@
+@push('styles')
+    @vite('resources/css/menus.css')
+@endpush
 <x-customer-layout>
-    @push('styles')
-        @vite('resources/css/menus.css')
-    @endpush
     <main class="main">
         <h1 class="menus-title">Mau Pesan Apa Hari Ini?</h1>
         <form class="search-form">

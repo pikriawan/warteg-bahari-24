@@ -1,9 +1,40 @@
-.menu-list {
+.main {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.menu-image {
-    object-fit: cover;
+.cart-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.cart-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: #D8FFD7;
+}
+
+.cart-empty-text {
+    color: #0A5D0C;
+}
+
+@media (min-width: 768px) {
+    .main {
+        gap: 2rem;
+    }
+
+    .cart-title {
+        font-size: 2.5rem;
+    }
+
+    .cart-empty {
+        padding: 4rem;
+    }
 }

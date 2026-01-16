@@ -1,42 +1,17 @@
+@push('styles')
+    @vite('resources/css/cart.css')
+@endpush
 <x-customer-layout>
-    @push('styles')
-        @vite('resources/css/cart.css')
-    @endpush
-    <div class="menu-list">
+    <main class="main">
+        <h1 class="cart-title">Keranjang</h1>
         @forelse ($menus as $menu)
-            <div>
-                <img class="menu-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="128" height="128">
-                <h3>{{ $menu->name }}</h3>
-                <p>Harga: {{ $menu->price }}</p>
-                <p>Jumlah di keranjang: {{ $menu->pivot->menu_quantity }}</p>
-                <form action="/cart" method="post">
-                    @csrf
-                    <input type="hidden" name="menu_id" value="{{ $menu->id }}">
-                    <input type="hidden" name="action" value="increment">
-                    <button>Tambah</button>
-                </form>
-                <form action="/cart" method="post">
-                    @csrf
-                    <input type="hidden" name="menu_id" value="{{ $menu->id }}">
-                    <input type="hidden" name="action" value="decrement">
-                    <button>Kurangi</button>
-                </form>
-            </div>
+            <p>Menus goes here</p>
         @empty
-            <p>Keranjang kosong</p>
+            <div class="cart-empty">
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="#0A5D0C" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-basket-icon lucide-shopping-basket"><path d="m15 11-1 9"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="M4.5 15.5h15"/><path d="m5 11 4-7"/><path d="m9 11 1 9"/></svg>
+                <p class="cart-empty-text">Keranjangmu kosong!</p>
+                <a class="button button-primary" href="/menus">Yuk, isi keranjangmu sekarang!</a>
+            </div>
         @endforelse
-    </div>
-    @if (count($menus) > 0)
-        <div>
-            <h2>Checkout</h2>
-            <form action="/checkout" method="post">
-                @csrf
-                <div>
-                    <label for="customerName">Nama</label>
-                    <input name="customer_name" id="customerName" required>
-                </div>
-                <button>Bayar sekarang: Rp {{ $totalPrice }}</button>
-            </form>
-        </div>
-    @endif
+    </main>
 </x-customer-layout>
