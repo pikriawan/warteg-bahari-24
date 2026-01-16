@@ -12,6 +12,22 @@ class MenuController extends Controller
     {
         $data = Menu::where('is_available', true);
 
+        $categories = $data
+            ->latest()
+            ->get()
+            ->map(function ($menu) {
+                return $menu->category;
+            })
+            ->unique();
+
+        $searchPlaceholder = $data->get();
+
+        if ($searchPlaceholder->isNotEmpty()) {
+            $searchPlaceholder = $searchPlaceholder->random()->name;
+        } else {
+            $searchPlaceholder = null;
+        }
+
         if ($request->query('search') !== null) {
             $data = $data->ofSearch($request->query('search'));
         }
@@ -27,16 +43,10 @@ class MenuController extends Controller
                 return $menu->category;
             });
 
-        $categories = Menu::where('is_available', true)
-            ->get()
-            ->map(function ($menu) {
-                return $menu->category;
-            })
-            ->unique();
-
         return view('menus', [
             'data' => $data,
             'categories' => $categories,
+            'searchPlaceholder' => $searchPlaceholder,
         ]);
     }
 }
