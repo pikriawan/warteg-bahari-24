@@ -36,6 +36,10 @@ class OrderController extends Controller
             abort(401);
         }
 
+        if ($order->status !== 'pending') {
+            abort(400);
+        }
+
         $order->status = 'canceled';
 
         $order->save();
