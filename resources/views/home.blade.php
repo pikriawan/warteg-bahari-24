@@ -24,45 +24,45 @@
         <section class="advantages">
             <h2 class="advantages-title">Keunggulan Kami</h2>
             <div class="advantages-list">
-                <div class="advantages-item">
+                <div class="advantage-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00B700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smile-icon lucide-smile"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
-                    <h3 class="advantages-item-title">Pelayanan Cepat dan Ramah</h3>
-                    <p class="advantages-item-text">Setiap pelanggan kami layani dengan cepat dan penuh senyum, agar pengalaman makan lebih menyenangkan.</p>
+                    <h3 class="advantage-item-title">Pelayanan Cepat dan Ramah</h3>
+                    <p class="advantage-item-text">Setiap pelanggan kami layani dengan cepat dan penuh senyum, agar pengalaman makan lebih menyenangkan.</p>
                 </div>
-                <div class="advantages-item">
+                <div class="advantage-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00B700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-coffee-icon lucide-coffee"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></svg>
-                    <h3 class="advantages-item-title">Rasa Rumahan</h3>
-                    <p class="advantages-item-text">Cita rasa masakan rumahan yang membuat pelanggan merasa seperti makan di rumah sendiri.</p>
+                    <h3 class="advantage-item-title">Rasa Rumahan</h3>
+                    <p class="advantage-item-text">Cita rasa masakan rumahan yang membuat pelanggan merasa seperti makan di rumah sendiri.</p>
                 </div>
-                <div class="advantages-item">
+                <div class="advantage-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00B700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet-icon lucide-wallet"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg>
-                    <h3 class="advantages-item-title">Harga Terjangkau</h3>
-                    <p class="advantages-item-text">Menu lengkap dengan harga terjangkau untuk semua kalangan, terutama mahasiswa dan pekerja.</p>
+                    <h3 class="advantage-item-title">Harga Terjangkau</h3>
+                    <p class="advantage-item-text">Menu lengkap dengan harga terjangkau untuk semua kalangan, terutama mahasiswa dan pekerja.</p>
                 </div>
-                <div class="advantages-item">
+                <div class="advantage-item">
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00B700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
-                    <h3 class="advantages-item-title">Buka 24 Jam</h3>
-                    <p class="advantages-item-text">Kapan pun lapar, Warteg Bahari 24 selalu siap melayani Anda siang maupun malam.</p>
+                    <h3 class="advantage-item-title">Buka 24 Jam</h3>
+                    <p class="advantage-item-text">Kapan pun lapar, Warteg Bahari 24 selalu siap melayani Anda siang maupun malam.</p>
                 </div>
             </div>
         </section>
         <section class="menus">
             <h2 class="menus-title">Menu yang Kami Sajikan</h2>
             <div class="menus-list">
-                <div class="menus-item">
-                    <img class="menus-item-image" src="/images/telur-balado.jpg" alt="Telur Balado">
-                    <h3 class="menus-item-title">Telur Balado</h3>
-                    <p class="menus-item-text">Telur rebus yang diolah dengan sambal balado pedas gurih, menghadirkan rasa khas nusantara yang selalu bikin ingin tambah nasi.</p>
+                <div class="menu-item">
+                    <img class="menu-item-image" src="/images/telur-balado.jpg" alt="Telur Balado">
+                    <h3 class="menu-item-title">Telur Balado</h3>
+                    <p class="menu-item-text">Telur rebus yang diolah dengan sambal balado pedas gurih, menghadirkan rasa khas nusantara yang selalu bikin ingin tambah nasi.</p>
                 </div>
-                <div class="menus-item">
-                    <img class="menus-item-image" src="/images/sayur-sop.jpg" alt="Sayur Sop">
-                    <h3 class="menus-item-title">Sayur Sop</h3>
-                    <p class="menus-item-text">Kuah bening hangat dengan campuran sayuran segar dan bumbu sederhana. Segar, menyehatkan, dan cocok untuk semua suasana.</p>
+                <div class="menu-item">
+                    <img class="menu-item-image" src="/images/sayur-sop.jpg" alt="Sayur Sop">
+                    <h3 class="menu-item-title">Sayur Sop</h3>
+                    <p class="menu-item-text">Kuah bening hangat dengan campuran sayuran segar dan bumbu sederhana. Segar, menyehatkan, dan cocok untuk semua suasana.</p>
                 </div>
-                <div class="menus-item">
-                    <img class="menus-item-image" src="/images/tumis-pare.jpg" alt="Tumis Pare">
-                    <h3 class="menus-item-title">Tumis Pare</h3>
-                    <p class="menus-item-text">Tumis pare dengan sentuhan bumbu gurih pedas yang seimbang. Rasa khasnya justru bikin nagih di setiap suapan.</p>
+                <div class="menu-item">
+                    <img class="menu-item-image" src="/images/tumis-pare.jpg" alt="Tumis Pare">
+                    <h3 class="menu-item-title">Tumis Pare</h3>
+                    <p class="menu-item-text">Tumis pare dengan sentuhan bumbu gurih pedas yang seimbang. Rasa khasnya justru bikin nagih di setiap suapan.</p>
                 </div>
             </div>
             <a class="button button-primary" href="/menus">Jelajahi menu lainnya</a>
@@ -70,25 +70,25 @@
         <section class="reviews">
             <h2 class="reviews-title">Apa Kata Mereka?</h2>
             <div class="reviews-list">
-                <div class="reviews-item">
-                    <img class="reviews-item-image" src="/images/reviewer-1.png" alt="Reviewer" width="48" height="48">
-                    <h3 class="reviews-item-title">Gamma Assyafi Fadhillah Ar Rasyad</h3>
-                    <p class="reviews-item-text">Makanan dan tempat seperti warteg pada umumnya. Kalau mau makan hemat bisa di sini, telur+nasi+sayur+es teh cuma 10rb. Cocok  buat anak kos yang pengen makan di luar tapi tetep hemat. Pelayanan sat  set ga pake lama~</p>
+                <div class="review-item">
+                    <img class="review-item-image" src="/images/reviewer-1.png" alt="Reviewer" width="48" height="48">
+                    <h3 class="review-item-title">Gamma Assyafi Fadhillah Ar Rasyad</h3>
+                    <p class="review-item-text">Makanan dan tempat seperti warteg pada umumnya. Kalau mau makan hemat bisa di sini, telur+nasi+sayur+es teh cuma 10rb. Cocok  buat anak kos yang pengen makan di luar tapi tetep hemat. Pelayanan sat  set ga pake lama~</p>
                 </div>
-                <div class="reviews-item">
-                    <img class="reviews-item-image" src="/images/reviewer-2.png" alt="Reviewer" width="48" height="48">
-                    <h3 class="reviews-item-title">Putri Adibatur Rohmah</h3>
-                    <p class="reviews-item-text">Saya kesini bawa anak kecil masakan rata2 enak, tapi pedas. Jadi saya hanya bisa pesan soto saja untuk anak saya. Rasanya enak, kek soto seger Jatim. Saran saya kalau siang tambahi sayuran bening atau sop</p>
+                <div class="review-item">
+                    <img class="review-item-image" src="/images/reviewer-2.png" alt="Reviewer" width="48" height="48">
+                    <h3 class="review-item-title">Putri Adibatur Rohmah</h3>
+                    <p class="review-item-text">Saya kesini bawa anak kecil masakan rata2 enak, tapi pedas. Jadi saya hanya bisa pesan soto saja untuk anak saya. Rasanya enak, kek soto seger Jatim. Saran saya kalau siang tambahi sayuran bening atau sop</p>
                 </div>
-                <div class="reviews-item">
-                    <img class="reviews-item-image" src="/images/reviewer-3.png" alt="Reviewer" width="48" height="48">
-                    <h3 class="reviews-item-title">Hafidz Prasetya</h3>
-                    <p class="reviews-item-text">Seperti warteg bahari pada umumnya sih, tapi yang ini warna oren dan bukan wkb grup. Harga oke murah, es teh lebih manis dari yang sebelah. Tempat tidak terlalu besar sangat. Rasa mirip warteg dimana saja. Point plus belum ada tukang parkir liar.</p>
+                <div class="review-item">
+                    <img class="review-item-image" src="/images/reviewer-3.png" alt="Reviewer" width="48" height="48">
+                    <h3 class="review-item-title">Hafidz Prasetya</h3>
+                    <p class="review-item-text">Seperti warteg bahari pada umumnya sih, tapi yang ini warna oren dan bukan wkb grup. Harga oke murah, es teh lebih manis dari yang sebelah. Tempat tidak terlalu besar sangat. Rasa mirip warteg dimana saja. Point plus belum ada tukang parkir liar.</p>
                 </div>
-                <div class="reviews-item">
-                    <img class="reviews-item-image" src="/images/reviewer-4.png" alt="Reviewer" width="48" height="48">
-                    <h3 class="reviews-item-title">Muhammad Rifqi</h3>
-                    <p class="reviews-item-text">Harga murah rasanya enak cocok untuk para mahasiswa, buka 24 jam jadi bisa kapan aja makan di sini, tempat bersih dan nyaman, parkir gratis es teh/teh anget pun gratis jika makan ditempat</p>
+                <div class="review-item">
+                    <img class="review-item-image" src="/images/reviewer-4.png" alt="Reviewer" width="48" height="48">
+                    <h3 class="review-item-title">Muhammad Rifqi</h3>
+                    <p class="review-item-text">Harga murah rasanya enak cocok untuk para mahasiswa, buka 24 jam jadi bisa kapan aja makan di sini, tempat bersih dan nyaman, parkir gratis es teh/teh anget pun gratis jika makan ditempat</p>
                 </div>
             </div>
         </section>
