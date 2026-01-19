@@ -12,8 +12,6 @@
                 @method('put')
                 <button>Batalkan pesanan</button>
             </form>
-        @endif
-        @if ($order->status !== 'finished' && $order->status !== 'canceled')
             <p>*Silahkan lakukan pembayaran melalui kasir</p>
         @endif
     </div>
