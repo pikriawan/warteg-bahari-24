@@ -36,15 +36,15 @@ class OrderController extends Controller
         $status = $request->string('status');
 
         if ($order->status === 'finished' || $order->status === 'canceled') {
-            abort(400);
+            return back();
         }
 
         if ($order->status === 'pending' && $status != 'processing' && $status != 'canceled') {
-            abort(400);
+            return back();
         }
 
         if ($order->status === 'processing' && $status != 'finished') {
-            abort(400);
+            return back();
         }
 
         $order->status = $status;
