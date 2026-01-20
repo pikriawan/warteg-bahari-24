@@ -23,8 +23,13 @@ class OrderController extends Controller
 
     public function show(Order $order)
     {
+        $totalPrice = $order->menus->reduce(function (?float $carry, $menu) {
+            return $carry + $menu->price * $menu->pivot->menu_quantity;
+        });
+
         return view('order', [
             'order' => $order,
+            'totalPrice' => $totalPrice,
         ]);
     }
 

@@ -40,6 +40,20 @@
     background-color: #049105;
 }
 
+.button-danger {
+    background-color: #FF0900;
+    color: white;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button-danger:hover {
+    background-color: #FF3A33;
+}
+
+.button-danger:active {
+    background-color: #CC0700;
+}
+
 .button-outlined {
     box-shadow: 0 0 0 0.0625rem #00B700 inset;
     color: #00B700;
