@@ -20,20 +20,20 @@ class MenuController extends Controller
             })
             ->unique();
 
-        $searchPlaceholder = $data->get();
-
-        if ($searchPlaceholder->isNotEmpty()) {
-            $searchPlaceholder = $searchPlaceholder->random()->name;
-        } else {
-            $searchPlaceholder = null;
-        }
-
         if ($request->query('search') !== null) {
             $data = $data->ofSearch($request->query('search'));
         }
 
         if ($request->query('category') !== null) {
             $data = $data->ofCategory($request->query('category'));
+        }
+
+        $searchPlaceholder = $data->get();
+
+        if ($searchPlaceholder->isNotEmpty()) {
+            $searchPlaceholder = $searchPlaceholder->random()->name;
+        } else {
+            $searchPlaceholder = null;
         }
 
         $data = $data
