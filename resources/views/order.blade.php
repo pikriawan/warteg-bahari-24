@@ -60,7 +60,7 @@
             </div>
             <div class="order-detail-row">
                 <p class="order-detail-text">Tanggal pemesanan</p>
-                <p class="order-detail-text">{{ $order->created_at->format('d F Y, H:i:s') }}</p>
+                <p class="order-detail-text">{{ $order->created_at->setTimezone('Asia/Jakarta')->format('d F Y, H:i:s') }}</p>
             </div>
             <div class="order-detail-row">
                 <p class="order-detail-text">Nama</p>

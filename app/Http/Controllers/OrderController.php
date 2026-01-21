@@ -12,9 +12,10 @@ class OrderController extends Controller
     public function index(Request $request)
     {
         $customer = Customer::where('session_id', $request->session()->getId())->first();
-        $orders = $customer
-            ->orders
-            ->whereNotNull('status');
+        $orders = Order::where('customer_id', $customer->id)
+            ->whereNotNull('status')
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('orders', [
             'orders' => $orders,
