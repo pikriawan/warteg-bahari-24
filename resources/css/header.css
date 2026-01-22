@@ -28,7 +28,7 @@
     font-size: 0.75rem;
 }
 
-.mobile-navbar-toggle-container {
+.mobile-cart-link-container {
     width: 3rem;
     height: 3rem;
     display: flex;
@@ -73,7 +73,7 @@
         display: none;
     }
 
-    .mobile-navbar-toggle-container {
+    .mobile-cart-link-container {
         display: none;
     }
 

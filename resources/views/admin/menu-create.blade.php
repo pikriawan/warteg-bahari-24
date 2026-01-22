@@ -1,7 +1,18 @@
+@push('styles')
+    @vite('resources/css/admin-menu-create.css')
+@endpush
+@push('scripts')
+    <script>
+        const preview = document.getElementById("preview");
+        const image = document.getElementById("image");
+
+        image.addEventListener("input", (event) => {
+            const file = event.currentTarget.files[0];
+            preview.src = URL.createObjectURL(file);
+        });
+    </script>
+@endpush
 <x-admin-layout>
-    @push('styles')
-        @vite('resources/css/admin-menu-create.css')
-    @endpush
     <h1>Buat menu baru</h1>
     <form action="/admin/menu/create" method="post" enctype="multipart/form-data">
         @csrf
@@ -44,13 +55,4 @@
             </ul>
         @endif
     </form>
-    <script>
-        const preview = document.getElementById("preview");
-        const image = document.getElementById("image");
-
-        image.addEventListener("input", (event) => {
-            const file = event.currentTarget.files[0];
-            preview.src = URL.createObjectURL(file);
-        });
-    </script>
 </x-admin-layout>

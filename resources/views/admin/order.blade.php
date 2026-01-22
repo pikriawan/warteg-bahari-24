@@ -1,7 +1,7 @@
+@push('styles')
+    @vite('resources/css/admin-order.css')
+@endpush
 <x-admin-layout>
-    @push('styles')
-        @vite('resources/css/admin-order.css')
-    @endpush
     <h1>Nomor pesanan #{{ $order->id }}</h1>
     <p>Nama pelanggan: {{ $order->customer_name }}</p>
     <p>Tanggal pemesanan: {{ $order->created_at }}</p>

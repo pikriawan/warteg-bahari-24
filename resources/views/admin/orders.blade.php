@@ -1,7 +1,7 @@
+@push('styles')
+    @vite('resources/css/admin-orders.css')
+@endpush
 <x-admin-layout>
-    @push('styles')
-        @vite('resources/css/admin-orders.css')
-    @endpush
     <h1>Daftar pesanan</h1>
     @if (count($orders) > 0)
         <table>

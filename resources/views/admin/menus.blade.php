@@ -1,7 +1,7 @@
+@push('styles')
+    @vite('resources/css/admin-menus.css')
+@endpush
 <x-admin-layout>
-    @push('styles')
-        @vite('resources/css/admin-menus.css')
-    @endpush
     <h1>Menu</h1>
     <a href="/admin/menu/create">Buat menu baru</a>
     <div class="menu-list">
