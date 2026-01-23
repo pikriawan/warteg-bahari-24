@@ -9,7 +9,7 @@
             @csrf
             <div class="form-field">
                 <label class="label" for="username">Username</label>
-                <input class="text-field" id="username" name="username" placeholder="Username Anda" required>
+                <input class="text-field" id="username" name="username" placeholder="Username Anda" autocapitalize="off" required>
             </div>
             <div class="form-field">
                 <label class="label" for="password">Password</label>
