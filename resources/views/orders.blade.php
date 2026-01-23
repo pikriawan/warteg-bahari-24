@@ -23,7 +23,7 @@
                         </div>
                         <div class="order-item-row">
                             <p class="order-item-text">Tanggal pemesanan</p>
-                            <p class="order-item-text">{{ $order->created_at->setTimezone('Asia/Jakarta')->format('d F Y, H:i:s') }}</p>
+                            <p class="order-item-text">{{ $order->checked_out_at->setTimezone('Asia/Jakarta')->format('d F Y, H:i:s') }}</p>
                         </div>
                         <div class="order-item-row">
                             <p class="order-item-text">Nama</p>

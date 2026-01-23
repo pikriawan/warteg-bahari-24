@@ -19,6 +19,7 @@ class CheckoutController extends Controller
 
         $cart->customer_name = $request->string('customer_name');
         $cart->status = 'pending';
+        $cart->checked_out_at = now();
 
         $cart->save();
 

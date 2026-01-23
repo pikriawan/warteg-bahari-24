@@ -14,6 +14,11 @@ class Order extends Model
         'customer_name',
         'order_number',
         'status',
+        'checked_out_at',
+    ];
+
+    protected $casts = [
+        'checked_out_at' => 'datetime',
     ];
 
     public function admin(): BelongsTo
