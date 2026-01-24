@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MenuController as AdminMenuController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\CartController;
@@ -43,6 +44,8 @@ Route::middleware('auth:admin')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     });
+
+    Route::get('/admin/dashboard', [DashboardController::class, 'show']);
 
     Route::post('/admin/logout', [AuthController::class, 'logout']);
 
