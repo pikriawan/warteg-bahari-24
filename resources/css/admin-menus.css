@@ -19,11 +19,17 @@
 
 .menus-table {
     display: grid;
-    grid-template-columns: repeat(6, 12.5rem);
+    grid-template-columns: repeat(6, minmax(12.5rem, 1fr));
     align-items: center;
     gap: 2rem;
     padding: 2rem;
     overflow-x: auto;
+}
+
+.table-data {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .table-text-strong {
