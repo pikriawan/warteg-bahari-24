@@ -37,7 +37,11 @@ class MenuController extends Controller
         }
 
         $menu->price = $request->float('price');
-        $menu->category = $request->string('category');
+
+        if ($request->filled('category')) {
+            $menu->category = $request->string('category');
+        }
+
         $menu->is_available = $request->boolean('is_available');
 
         $menu->save();
