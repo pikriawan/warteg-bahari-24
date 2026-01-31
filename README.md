@@ -4,9 +4,10 @@ Online menu ordering website made with Laravel 12
 - Admin dashboard
 - Menu management
 - Order management
-- Cart system without login
-- Checkout system without login
-- Order history without login
+- Cart system
+- Checkout system
+- Order history
+- No login required for customers
 ## Installation
 Clone this repository
 ```bash
