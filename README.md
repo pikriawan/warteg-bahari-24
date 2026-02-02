@@ -9,6 +9,13 @@ Online menu ordering website made with Laravel 12
 - Checkout system
 - Order history
 - No login required for customers
+## Screenshots
+### Landing Page
+![Landing Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/landing-page-screenshot.png)
+### Menus Page
+![Menus Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/menus-page-screenshot.png)
+### Cart Page
+![Cart Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/cart-page-screenshot.png)
 ## Installation
 Clone this repository
 ```bash
@@ -33,10 +40,3 @@ composer run dev
 ```
 Open http://localhost:8000 on your web browser
 > To access admin page, open http://localhost:8000/admin/login. The default username is `admin`. The default password is `admin123`.
-## Screenshots
-### Landing Page
-![Landing Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/landing-page-screenshot.png)
-### Menus Page
-![Menus Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/menus-page-screenshot.png)
-### Cart Page
-![Cart Page](https://raw.githubusercontent.com/pikriawan/warbar24-remake/refs/heads/main/public/images/cart-page-screenshot.png)
