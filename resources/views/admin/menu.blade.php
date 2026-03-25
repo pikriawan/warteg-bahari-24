@@ -17,7 +17,7 @@
 
         async function fetchImage() {
             try {
-                const response = await fetch("{{ asset('storage/' . $menu->image) }}");
+                const response = await fetch("{{ Storage::url($menu->image) }}");
 
                 if (!response.ok) {
                     throw new Error("Image fetch failed");

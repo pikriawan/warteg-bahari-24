@@ -44,7 +44,7 @@
                         <p class="table-text">{{ $menu->name }}</p>
                     </div>
                     <div class="table-data">
-                        <img class="table-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="64" height="64">
+                        <img class="table-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : Storage::url($menu->image) }}" alt="{{ $menu->name }}" width="64" height="64">
                     </div>
                     <div class="table-data">
                         <p class="table-text">{{ formatRupiah($menu->price) }}</p>

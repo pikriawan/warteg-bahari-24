@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/telur-balado.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/telur-balado.jpg'))),
         ]);
 
         Menu::create([
@@ -47,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/tumis-pare.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/tumis-pare.jpg'))),
         ]);
 
         Menu::create([
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 5000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/nasi.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/nasi.jpg'))),
         ]);
 
         Menu::create([
@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/sayur-terong.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/sayur-terong.jpg'))),
         ]);
 
         Menu::create([
@@ -82,7 +82,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 2000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/sayur-tahu-pedas.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/sayur-tahu-pedas.jpg'))),
         ]);
 
         Menu::create([
@@ -107,7 +107,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/tumis-kacang-panjang.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/tumis-kacang-panjang.jpg'))),
         ]);
 
         Menu::create([
@@ -116,7 +116,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/sayur-sop.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/sayur-sop.jpg'))),
         ]);
 
         Menu::create([
@@ -133,7 +133,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 9000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/ayam-goreng.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/ayam-goreng.jpg'))),
         ]);
 
         Menu::create([
@@ -142,7 +142,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/mie-goreng.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/mie-goreng.jpg'))),
         ]);
 
         Menu::create([
@@ -151,7 +151,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/tumis-kangkung.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/tumis-kangkung.jpg'))),
         ]);
 
         Menu::create([
@@ -200,7 +200,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/tumis-jamur.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/tumis-jamur.jpg'))),
         ]);
 
         Menu::create([
@@ -225,7 +225,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/telur-ceplok.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/telur-ceplok.jpg'))),
         ]);
 
         Menu::create([
@@ -234,7 +234,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/telur-dadar.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/telur-dadar.jpg'))),
         ]);
 
         Menu::create([
@@ -243,7 +243,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 9000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/pindang-goreng.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/pindang-goreng.jpg'))),
         ]);
 
         Menu::create([
@@ -260,7 +260,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 9000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/ayam-balado.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/ayam-balado.jpg'))),
         ]);
 
         Menu::create([
@@ -269,7 +269,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 9000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/ayam-kecap.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/ayam-kecap.jpg'))),
         ]);
 
         Menu::create([
@@ -278,7 +278,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/kentang-balado.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/kentang-balado.jpg'))),
         ]);
 
         Menu::create([
@@ -295,7 +295,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 9000,
             'category'     => 'makanan',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/lele-goreng.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/lele-goreng.jpg'))),
         ]);
 
         Menu::create([
@@ -304,7 +304,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/es-teh.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/es-teh.jpg'))),
         ]);
 
         Menu::create([
@@ -313,7 +313,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 3000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/teh-hangat.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/teh-hangat.jpg'))),
         ]);
 
         Menu::create([
@@ -322,7 +322,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 5000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/es-jeruk.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/es-jeruk.jpg'))),
         ]);
 
         Menu::create([
@@ -331,7 +331,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 5000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/lemon-tea.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/lemon-tea.jpg'))),
         ]);
 
         Menu::create([
@@ -356,7 +356,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/kopi-hitam.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/kopi-hitam.jpg'))),
         ]);
 
         Menu::create([
@@ -365,7 +365,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/susu-putih-hangat.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/susu-putih-hangat.jpg'))),
         ]);
 
         Menu::create([
@@ -382,7 +382,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 4000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/susu-cokelat-hangat.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/susu-cokelat-hangat.jpg'))),
         ]);
 
         Menu::create([
@@ -391,7 +391,7 @@ class DatabaseSeeder extends Seeder
             'price'        => 5000,
             'category'     => 'minuman',
             'is_available' => true,
-            'image'        => Storage::disk('public')->putFile('uploads', new File(public_path('images/es-susu-cokelat.jpg'))),
+            'image'        => Storage::putFile('uploads', new File(public_path('images/es-susu-cokelat.jpg'))),
         ]);
     }
 }

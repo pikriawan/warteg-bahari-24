@@ -17,7 +17,7 @@
             <div class="menus-list">
                 @foreach ($menus as $menu)
                     <div class="menu-item">
-                        <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" width="64" height="64">
+                        <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : Storage::url($menu->image) }}" alt="{{ $menu->name }}" width="64" height="64">
                         <div class="menu-item-detail">
                             <p class="menu-item-title">{{ $menu->name }}</p>
                             <div class="menu-item-bottom">

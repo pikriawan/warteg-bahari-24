@@ -57,7 +57,7 @@
                         @foreach ($menus as $menu)
                             <div class="menu-item">
                                 <div class="menu-item-top">
-                                    <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}">
+                                    <img class="menu-item-image" src="{{ $menu->image === null ? '/images/menu-no-image.png' : Storage::url($menu->image) }}" alt="{{ $menu->name }}">
                                     <h3 class="menu-item-title">{{ $menu->name }}</h3>
                                     <p class="menu-item-price">{{ formatRupiah($menu->price) }}</p>
                                 </div>
